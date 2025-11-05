@@ -42,8 +42,8 @@ export const Icons = [
 export default function Home() {
   return (
     <div className="relative h-screen w-full flex items-center justify-center bg-gray-100">
-      <div className="absolute h-90 w-80 shadow-2xl border-neutral-200 rounded-xl">
-        <div className="flex items-center gap-4 justify-center">
+      <div className="relative h-90 w-80 shadow-2xl border-neutral-500 rounded-xl">
+        <div className="flex items-center gap-4 justify-center mask-r-from-50% mask-l-from-50 animate-marquee">
           {Icons.map((items) => (
             <div
               key={items.title}
@@ -53,6 +53,8 @@ export default function Home() {
             </div>
           ))}
         </div>
+        <h1>These LLMs are getting out or hand</h1>
+        <p></p>
       </div>
     </div>
   );
