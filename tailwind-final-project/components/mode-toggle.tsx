@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 
 import { useTheme } from "next-themes";
@@ -13,7 +15,15 @@ const ModeToggle = () => {
   // useEffect ayega like for sideEffect systemTheme okkh!....
 
   useEffect(() => {
-    const media;
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+    const handleChange = (e: MediaQueryListEvent) => {
+      setSystemTheme(e.matches ? "dark" : "light");
+    };
+
+    mediaQuery.addEventListener("change", handleChange);
+
+    return () => mediaQuery.removeEventListener("change", handleChange); // ye jo hai woo remove and erase k liye hia okkh!..
   }, []);
 
   const SwitchToggle = () => {
@@ -37,16 +47,16 @@ const ModeToggle = () => {
 
   return (
     <button
-      className="size-4 flex justify-center items-center"
+      className="relative flex justify-center items-center"
       onClick={() => SwitchToggle()}
     >
       <Sun
         size={14}
-        className="rotate-0 scale-100 transition-all duration-100 dark:rotate-90 dark:scale-0"
+        className="absolute inset-0 rotate-0 scale-100 transition-all duration-100 dark:rotate-90 dark:scale-0 "
       />
       <Moon
         size={14}
-        className="rotate-90 scale-0 transition-all duration-100 dark:rotate-0 dark:scale-100"
+        className=" absolute inset-0 rotate-90 scale-0 transition-all duration-100 dark:rotate-0 dark:scale-100"
       />
     </button>
   );
