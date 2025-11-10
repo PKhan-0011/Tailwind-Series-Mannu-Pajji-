@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+.dark {
+  --background: #171717;
+  --foreground: #ffffff;
+  --inter: var(--font-inter);
+  --manrope: var(--font-manrope);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-inter: var(--inter);
+  --font-display: var(--manrope);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
