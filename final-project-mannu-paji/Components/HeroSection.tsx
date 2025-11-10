@@ -5,6 +5,9 @@ import SubHeading from "@/Components/SubHeading";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
+import Landingpage from "@/Components/landingImage";
+import { Lancelot } from "next/font/google";
 
 const HeroSection = () => {
   return (
@@ -14,7 +17,7 @@ const HeroSection = () => {
           Agents That do the work. <span>Appprovals that keep you safe</span>
         </Heading>
 
-        <SubHeading className="py-8">
+        <SubHeading className="py-8" as="p">
           Deploy AI agents that plan, act through your tools, and rotate
           outcomes-without chnaging how your teams work.
         </SubHeading>
@@ -33,12 +36,12 @@ const HeroSection = () => {
           </Link>
         </div>
 
-        <div className="relative min-h-140 w-full">
-          <Image src="" alt="#" />
-        </div>
+        <Landingpage />
       </Container>
     </div>
   );
 };
 
 export default HeroSection;
+
+// presepective-distance and transform-3d ayega isme mughe jo elemeny hai era wp rotate ho jayega 3d pkkh!./.
