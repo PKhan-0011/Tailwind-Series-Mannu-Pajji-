@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
+import ThemeProvider from "@/ThemeProvider//ThemeProvider";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -25,12 +26,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${inter.className} ${manrope.variable} antialiased bg-background text-foreground`}
       >
-        <main className=""> {children} </main>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <main className=""> {children} </main>
+        </ThemeProvider>
       </body>
     </html>
   );
 }
+
+// disableTrnasitiononChnage iska matlb ye hia like jab bhi mai page chnage karuu to wo theme apne app change na ho!..
