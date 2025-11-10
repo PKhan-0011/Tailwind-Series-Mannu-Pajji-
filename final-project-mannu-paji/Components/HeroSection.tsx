@@ -4,6 +4,7 @@ import Heading from "./heading";
 import SubHeading from "@/Components/SubHeading";
 import { Button } from "./ui/button";
 import Link from "next/link";
+import Image from "next/image";
 
 const HeroSection = () => {
   return (
@@ -30,6 +31,10 @@ const HeroSection = () => {
               Start your free trail for 30-days
             </Button>
           </Link>
+        </div>
+
+        <div className="relative min-h-140 w-full">
+          <Image src="" alt="#" />
         </div>
       </Container>
     </div>
