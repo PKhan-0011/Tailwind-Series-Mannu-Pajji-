@@ -45,16 +45,16 @@ const ModeToggle = () => {
   return (
     <button
       onClick={() => Switch()}
-      className="flex hover:cursor-pointer items-center justify-center size-10 border border-red-600"
+      className="flex relative hover:cursor-pointer items-center justify-center text-center hover:bg-neutral-200 transition-all duration-200 ease-in-out "
     >
       <Sun
         size={30}
-        className="rotate-0 scale-100 transition-all duration-200 dark:rotate-90 dark:scale-0"
+        className="rotate-0 absolute inset-0 scale-100 transition-all duration-200 dark:rotate-90 dark:scale-0"
       />
 
       <Moon
         size={30}
-        className="rotate-90 scale-0 transition-all duration-200 dark:rotate-0 dark:scale-100"
+        className="rotate-90 absolute inset-0 scale-0 transition-all duration-200 dark:rotate-0 dark:scale-100"
       />
     </button>
   );
