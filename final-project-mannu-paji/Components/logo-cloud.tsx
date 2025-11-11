@@ -1,7 +1,41 @@
-import React from "react";
+// import { section } from "motion/react-client";
+// import React from "react";
+// import Image from "next/image";
 
-const LogoCloud = () => {
-  return <div>logo-cloud</div>;
-};
+// const LogoCloud = () => {
+//   const logos = [
+//     {
+//       title: "Open Ai",
+//       src: "",
+//     },
+//     {
+//       title: "Hello Pateint",
+//       src: "",
+//     },
+//     {
+//       title: "Granola",
+//       src: "",
+//     },
+//     {
+//       title: "Character Ai",
+//       src: "",
+//     },
 
-export default LogoCloud;
+//     {
+//       title: "Oracle",
+//       src: "",
+//     },
+//   ];
+
+//   return (
+//     <section>
+//       <h2></h2>
+
+//       {logos.map(() => (
+//         <Image href={} alt={} height={} width={} />
+//       ))}
+//     </section>
+//   );
+// };
+
+// export default LogoCloud;
