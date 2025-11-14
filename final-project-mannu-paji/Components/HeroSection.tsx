@@ -35,7 +35,6 @@ const HeroSection = () => {
             </Button>
           </Link>
         </div>
-
         <Landingpage />
       </Container>
     </div>
