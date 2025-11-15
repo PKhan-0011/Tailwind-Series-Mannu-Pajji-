@@ -59,6 +59,8 @@ export const CardSkeleton = ({
   className?: string;
 }) => {
   return (
-    <div className={cn("min-h-40 md:min-h-60", className)}>{children}</div>
+    <div className={cn("relative min-h-40 md:min-h-80", className)}>
+      {children}
+    </div>
   );
 };

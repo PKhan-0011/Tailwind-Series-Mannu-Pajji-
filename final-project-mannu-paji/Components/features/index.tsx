@@ -9,6 +9,7 @@ import { CardTitle } from "@/Components/features/card";
 import { CardContent } from "@/Components/features/card";
 import { Plus } from "lucide-react";
 import Skeleton from "@/Components/CardSkeleton/Skeleton";
+import ThirdSkeleton from "../CardSkeleton/ThirdSkeleton";
 
 const FeaturesSection = () => {
   return (
@@ -54,7 +55,9 @@ const FeaturesSection = () => {
         </Card>
 
         <Card className="rounded-tr-4xl rounded-br-4xl shadow-lg">
-          <CardSkeleton></CardSkeleton>
+          <CardSkeleton>
+            <ThirdSkeleton />
+          </CardSkeleton>
           <CardContent className="flex items-center gap-4">
             <CardTitle className="">
               Approvals, Guardils, and full Auditabilty

@@ -6,25 +6,46 @@ import { ArrowRight } from "lucide-react";
 
 const Skeleton = () => {
   return (
-    <div>
-      <SkeletonCard />
+    <div className="relative h-[300px] w-full">
+      <SkeletonCard
+        className="absolute bottom-0 left-12 z-30 max-w-[90%]"
+        icon={<BadgeCheck className="size-6" />}
+        title="Campaign Planner"
+        description="Creates clear, ready-to-use campaign briefs using pproduct info,
+        audience data, and past results."
+        badge={<Badge text="1205" variant="warning" />}
+      />
     </div>
   );
 };
 
+// dekh bhai kabhi bhi abb props pass kario to ek chiz ka dhyan rakhio like ki props agar koi value hai like string wali jaise
+// text wagarh to hamm " " usko string m paas kardo okk!H but agar koi component hai to usko {} is bracket m dena padega okkh!..
+
 export default Skeleton;
 
-export const SkeletonCard = ({}) => {
+export const SkeletonCard = ({
+  className,
+  icon,
+  title,
+  description,
+  badge,
+}: {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+  badge: React.ReactNode;
+  className: string;
+}) => {
   return (
     <div className="mx-auto w-full rounded-lg border border-neutral-200 bg-neutral-50 p-1 dark:border-neutral-700">
       <div className="flex items-center gap-3">
-        <BadgeCheck className="size-6" />
-        <p className="text-sm font-bold">Campaign Planner</p>
-        <Badge text="1205" variant="warning" />
+        {icon}
+        <p className="text-sm font-bold">{title}</p>
+        {badge}
       </div>
       <p className="mt-3 text-sm font-medium text-neutral-500 dark:text-neutral-400">
-        Creates clear, ready-to-use campaign briefs using pproduct info,
-        audience data, and past results.
+        {description}
       </p>
 
       <div className="flex flex-wrap items-center gap-2">
@@ -43,6 +64,8 @@ export const SkeletonCard = ({}) => {
     </div>
   );
 };
+
+// Ye above wala jo skeleto wala hai ye isse sirf first card hi banega okkh!..
 
 // Ye appan n banaya hai okkh! to dhyan rakhio like ki ham bhi ye create kar sakte hai okkh!..
 
@@ -79,3 +102,5 @@ export const Badge = ({
     </div>
   );
 };
+
+// badge jo hai mai wo khud sbhi ban sakta tha okkh! but mughe todha first time good ui banana tha that's why maine Yha s dekha hai okkh!..
