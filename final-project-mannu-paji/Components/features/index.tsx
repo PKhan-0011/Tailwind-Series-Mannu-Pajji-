@@ -42,10 +42,7 @@ const FeaturesSection = () => {
         </Card>
 
         <Card className="shadow-lg">
-          <CardSkeleton>
-            {" "}
-            <Skeleton />
-          </CardSkeleton>
+          <CardSkeleton></CardSkeleton>
           <CardContent className="flex items-center gap-4">
             <CardTitle className="">
               Automates Handoffs, Reduce Ops Friction
@@ -57,9 +54,7 @@ const FeaturesSection = () => {
         </Card>
 
         <Card className="rounded-tr-4xl rounded-br-4xl shadow-lg">
-          <CardSkeleton>
-            <Skeleton />
-          </CardSkeleton>
+          <CardSkeleton></CardSkeleton>
           <CardContent className="flex items-center gap-4">
             <CardTitle className="">
               Approvals, Guardils, and full Auditabilty
