@@ -9,8 +9,8 @@ const SpeedIndex = () => {
   return (
     <Container className="py-10 md:py-20 lg:py-10">
       <Heading className="text-shadow-lg">
-        Build for speed <br />
-        Designed for scale
+        Governed Ai, <br />
+        Trusted Outcomes
       </Heading>
 
       <SubHeading className="py-8">
@@ -19,7 +19,7 @@ const SpeedIndex = () => {
       </SubHeading>
 
       {/*Yha p actaully mughe images waal data dena padega okkh!.. like jaise first page hai na landing page wahi okkh!..*/}
-      <LandingImage02 />
+      <LandingImage01 />
     </Container>
   );
 };
@@ -30,9 +30,9 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { easeInOut, motion } from "motion/react";
 
-export const LandingImage02 = () => {
+export const LandingImage01 = () => {
   return (
-    <div className="relative mt-20 mb-10 min-h-140 w-full pt-20 perspective-distant transform-3d">
+    <div className="relative mt-20 min-h-140 w-full pt-20 perspective-distant transform-3d">
       <motion.div
         initial={{
           opacity: 0,
@@ -50,12 +50,12 @@ export const LandingImage02 = () => {
         className="perspective-[4000px]"
       >
         <Image
-          src="/Resume.png"
+          src="/GenerateImage.png"
           alt="#"
           height={1080}
           width={1928}
           className={cn(
-            "absolute inset-0 rounded-lg border-4 border-black mask-r-from-5% mask-b-from-80% shadow-2xl dark:border-neutral-800",
+            "absolute inset-0 rounded-lg border-4 border-neutral-100 mask-r-from-20% mask-b-from-50% shadow-2xl dark:border-neutral-800",
           )}
           style={{
             transform: "rotateX(20deg) rotateY(20deg) rotateZ(-20deg)",
@@ -69,7 +69,7 @@ export const LandingImage02 = () => {
           y: -400,
         }}
         animate={{
-          opacity: 1,
+          opacity: 10,
           y: 0,
         }}
         transition={{
@@ -80,12 +80,12 @@ export const LandingImage02 = () => {
         className="prespective-[4000px] translate-x-20 -translate-y-30"
       >
         <Image
-          src="/Resume.png"
+          src="/GenerateImage.png"
           alt="#"
           height={1080}
           width={1928}
           className={cn(
-            "absolute inset-0 rounded-lg border-4 border-black mask-r-from-60% mask-b-from-90% shadow-2xl dark:border-neutral-800",
+            "absolute inset-0 rounded-lg border-4 border-neutral-200 mask-r-from-50% mask-b-from-80% shadow-2xl dark:border-neutral-800",
           )}
           style={{
             transform: "rotateX(20deg) rotateY(20deg) rotateZ(-20deg)",

@@ -7,8 +7,8 @@ import { Infinity } from "lucide-react";
 const Section = () => {
   return (
     <Container className="">
-      <div className="mb-8 grid h-80 w-full grid-cols-1 justify-center gap-6 lg:grid-cols-3 lg:items-center">
-        <div className="flex flex-col items-center gap-2">
+      <div className="grid h-50 w-full grid-cols-1 items-center justify-center gap-6 lg:mt-4 lg:grid-cols-3 lg:items-center lg:pt-6">
+        <div className="flex flex-col items-center gap-2 rounded-lg border-2 border-black bg-neutral-100 p-1">
           <h1 className="flex items-center gap-2 text-xl font-semibold">
             <span>
               <Workflow />
@@ -22,7 +22,7 @@ const Section = () => {
           </p>
         </div>
 
-        <div className="flex flex-col items-center gap-2">
+        <div className="flex flex-col items-center gap-2 rounded-lg border-2 border-black bg-neutral-100 p-1">
           <h1 className="flex items-center gap-2 text-xl font-semibold">
             <span>
               <Infinity size={30} />
@@ -36,7 +36,7 @@ const Section = () => {
           </p>
         </div>
 
-        <div className="flex flex-col items-center gap-2">
+        <div className="flex flex-col items-center gap-2 rounded-lg border-2 border-black bg-neutral-100 p-2">
           <h1 className="flex items-center gap-2 text-xl font-semibold">
             <span>
               <Snowflake />

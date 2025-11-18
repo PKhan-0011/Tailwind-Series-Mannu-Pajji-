@@ -6,6 +6,7 @@ import SpeedIndex from "@/Components/SpeedContent";
 import FeaturesSecondary from "@/Components/features-secondary";
 import FeaturesSection from "@/Components/features/index";
 import Section from "@/Middelsection/Section";
+import HeadingAgain from "@/Middelsection/HeadingAgain";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <SpeedIndex />
       <FeaturesSecondary />
       <Section />
+      <HeadingAgain />
     </div>
   );
 }
