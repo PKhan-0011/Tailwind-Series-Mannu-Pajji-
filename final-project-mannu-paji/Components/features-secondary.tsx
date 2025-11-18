@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import FirstCard from "./CardSkeleton02/FirstCard";
 import SecondCard from "./CardSkeleton02/SecondCard";
 import ThirdCard from "./CardSkeleton02/ThirdCard";
+import SecondCardSkeleton from "@/Components/CardSkeleton/SecondCard/SecondCardSkeleton";
 
 const FeatureSecondary = () => {
   return (
@@ -38,7 +39,9 @@ const FeatureSecondary = () => {
               support and ops, built around your workflows
             </CardDescription>
 
-            <CardSkeleton> </CardSkeleton>
+            <CardSkeleton>
+              <SecondCardSkeleton />
+            </CardSkeleton>
           </div>
         </div>
       </Container>
