@@ -2,8 +2,9 @@ import Image from "next/image";
 import ModeToggle from "@/ModeToggle/index";
 import HeroSection from "@/Components/HeroSection";
 import LogoCloud from "@/Components/logo-cloud";
-import FeaturesSection from "@/Components/features/index";
 import SpeedIndex from "@/Components/SpeedContent";
+import FeaturesSecondary from "@/Components/features-secondary";
+import FeaturesSection from "@/Components/features/index";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <LogoCloud />
       <FeaturesSection />
       <SpeedIndex />
+      <FeaturesSecondary />
     </div>
   );
 }

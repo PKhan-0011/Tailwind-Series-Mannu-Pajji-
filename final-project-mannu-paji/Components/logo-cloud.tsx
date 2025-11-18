@@ -36,7 +36,7 @@ const LogoCloud = () => {
   ];
 
   return (
-    <Container className="mt-40 mb-10 border-t border-red-400 p-4">
+    <Container className="mt-40 mb-10 border-t border-b border-gray-200 p-8">
       <section className="">
         <motion.div
           className="text-center"
