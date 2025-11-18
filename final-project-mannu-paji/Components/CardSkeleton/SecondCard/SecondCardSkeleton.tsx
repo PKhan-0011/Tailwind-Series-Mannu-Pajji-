@@ -49,7 +49,5 @@ export const Circle = ({
 };
 
 // Bhai ispe images chal nahi rhi hai isko sahi s dekhio okkh!..
-
 // Yha pe ek aur kaam kar liyo like moveing wala nahi wo like hai na jo tilted images todhe waisa banana hai bna liyo khud s okkh!..
-
 // href jo hota hai wo next image , nahi ata and mai isme patth rakhta hu jaise http:localhost.com erc etc ye ayega ookkh!..
