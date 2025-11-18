@@ -7,13 +7,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import Landingpage from "@/Components/landingImage";
-import { Lancelot } from "next/font/google";
 
 const HeroSection = () => {
   return (
     <div className="p-10 md:p-20 lg:pt-32">
       <Container className="">
-        <Heading as="h1">
+        <Heading as="h1" className="shadow-2xl text-shadow-lg">
           Agents That do the work. <span>Appprovals that keep you safe</span>
         </Heading>
 
