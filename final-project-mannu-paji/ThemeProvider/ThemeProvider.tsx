@@ -1,5 +1,7 @@
 "use client";
 
+// wiase generally dekha jaye to ye pages jo hote hai wo server side rendering p chlte hai okkj but if we use client to clinett side render ho jayega okkh!.
+
 import React from "react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 

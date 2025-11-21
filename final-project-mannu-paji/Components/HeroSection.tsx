@@ -12,7 +12,7 @@ const HeroSection = () => {
   return (
     <div className="p-10 md:p-20 lg:pt-32">
       <Container className="">
-        <Heading as="h1" className="shadow-2xl text-shadow-lg">
+        <Heading as="h1" className="text-shadow-lg">
           Agents That do the work. <span>Appprovals that keep you safe</span>
         </Heading>
 
