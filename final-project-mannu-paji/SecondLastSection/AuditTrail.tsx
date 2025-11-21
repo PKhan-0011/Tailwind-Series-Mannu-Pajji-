@@ -115,6 +115,15 @@ import React from "react";
 import Container from "@/Components/Container";
 import { cn } from "@/lib/utils";
 import { BellElectric } from "lucide-react";
+import { MailPlus } from "lucide-react";
+import { Tv } from "lucide-react";
+import { CircleFadingPlus } from "lucide-react";
+import { Activity } from "lucide-react";
+import { Donut } from "lucide-react";
+import { Button } from "@/Components/ui/button";
+import { ClockFading } from "lucide-react";
+import { LoaderCircle } from "lucide-react";
+import { motion } from "motion/react";
 
 const AuditTrail = () => {
   return (
@@ -143,8 +152,8 @@ const AuditTrail = () => {
             </h1>
             <CardDescription className="">
               <p>
-                Track every agent action with full input-output <br /> visiblity
-                and timestamps.
+                Controls who can launch, review, or manage agents <br /> based
+                on roles.
               </p>
             </CardDescription>
           </div>
@@ -193,11 +202,84 @@ export const Card = ({
 
 export const CardMaterials = () => {
   return (
-    <div className="h-full rounded-2xl border-2 border-neutral-200 bg-white">
-      <div className="flex items-center gap-2 divide-y divide-neutral-200 border-b p-2 pl-6">
+    <motion.div
+      className="h-full cursor-pointer divide-y divide-neutral-200 overflow-hidden rounded-2xl border-2 border-neutral-200 bg-white"
+      initial={{
+        y: 0,
+        opacity: 0,
+      }}
+      animate={{
+        y: 4,
+        opacity: 1,
+      }}
+      transition={{
+        duration: 0.5,
+        ease: "easeInOut",
+      }}
+      whileHover={{
+        y: -10,
+        scale: 1,
+      }}
+    >
+      <div className="flex items-center gap-2 border-b p-2 pl-6">
         <BellElectric size={20} />
         <h1 className="text-xl font-semibold">Recent Activity</h1>
       </div>
-    </div>
+      <div className="flex items-center gap-2 border-b p-2 pl-6">
+        <MailPlus size={20} className="rounded bg-blue-600 p-1 text-white" />
+        <h1 className="font-display text-sm text-gray-600">
+          Personalize Email
+        </h1>
+        <Button className="text-2xs ml-20" variant="outline">
+          {" "}
+          <ClockFading /> 15s
+        </Button>
+      </div>
+      <div className="flex items-center gap-2 border-b p-2 pl-6">
+        <Tv className="rounded bg-purple-500 p-1 text-white" size={20} />
+        <h1 className="font-display text-sm text-gray-600">Peer Review</h1>
+        <Button
+          className="ml-10 bg-red-400 text-sm text-white"
+          variant="outline"
+        >
+          {" "}
+          <LoaderCircle /> 3
+        </Button>
+        <button className="ml-4 rounded bg-red-400 p-2 px-4 text-sm text-white">
+          Failed
+        </button>
+      </div>
+      <div className="flex items-center gap-2 border-b p-2 pl-6">
+        <CircleFadingPlus
+          size={20}
+          className="rounded bg-blue-600 p-1 text-white"
+        />
+        <h1 className="font-display text-sm text-gray-600">Content Drafting</h1>
+        <button className="ml-20 rounded bg-amber-200 p-1 text-sm text-yellow-600">
+          processing
+        </button>
+      </div>
+      <div className="flex items-center gap-2 border-b p-2 pl-6">
+        <Activity size={20} className="rounded bg-black p-1 text-white" />
+        <h1 className="text-sm text-gray-600">Admin Approval</h1>
+        <button className="ml-20 rounded bg-amber-200 p-1 text-sm text-yellow-600">
+          processing
+        </button>
+      </div>
+      <div className="flex items-center gap-2 border-b p-2 pl-6">
+        <Donut size={20} className="rounded bg-purple-500 p-1 text-white" />
+        <h1 className="text-sm text-gray-600">Weekly Campaign Reports</h1>
+        <Button className="text-2xs ml-20" variant="outline">
+          {" "}
+          <ClockFading /> 15s
+        </Button>
+      </div>
+      <div className="flex items-center gap-2 border-b p-2 pl-6">
+        <Donut size={20} className="rounded bg-green-500 p-1 text-white" />
+        <h1 className="text-sm text-gray-600">Seo Audit</h1>
+      </div>
+    </motion.div>
   );
 };
+
+// mailPlus {..props} aisa pass kiya hoga uske baad hi hamm ye sab kar sakte hai okkh!.
