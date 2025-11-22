@@ -34,7 +34,7 @@ const AuditTrail = () => {
                 </p>
               </CardDescription>
             </div>
-            <Card className="relative h-90 overflow-hidden p-1">
+            <Card className="relative h-90 overflow-hidden mask-b-from-70% p-1">
               <CardMaterials />
             </Card>
           </div>
@@ -238,7 +238,7 @@ export const Items = ({
         y: -4,
       }}
       className={cn(
-        "relative z-10 size-20 rounded-xl border border-dashed border-neutral-400 p-0.5",
+        "relative z-10 size-20 rounded-xl border border-dashed border-neutral-800 p-0.5",
         "bg-[linear-gradient(to_right,rgba(0,0,0,0.10)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.10)_1px,transparent_1px)] bg-[size:24px_24px] dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.06)_1px,transparent_1px)]",
         className,
       )}
