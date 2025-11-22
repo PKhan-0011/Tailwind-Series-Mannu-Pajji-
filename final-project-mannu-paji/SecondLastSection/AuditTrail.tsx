@@ -15,6 +15,7 @@ import { LoaderCircle } from "lucide-react";
 import { motion } from "motion/react";
 import { Search } from "lucide-react";
 import BelowAudit from "./BelowAudit";
+import Image from "next/image";
 
 const AuditTrail = () => {
   return (
@@ -33,7 +34,7 @@ const AuditTrail = () => {
                 </p>
               </CardDescription>
             </div>
-            <Card className="relative h-70 overflow-hidden p-1">
+            <Card className="relative h-90 overflow-hidden p-1">
               <CardMaterials />
             </Card>
           </div>
@@ -47,6 +48,28 @@ const AuditTrail = () => {
                 on roles.
               </p>
             </CardDescription>
+
+            <div className="flex h-full w-full flex-col items-start justify-center gap-4 rounded-t-3xl px-8 pl-4">
+              <div className="grid grid-cols-4 gap-4 p-2 px-1 sm:gap-15">
+                <Items />
+                <Items src="/google.wbep" className="" />
+                <Items />
+                <Items />
+              </div>
+
+              <div className="grid grid-cols-4 gap-4 p-2 px-2 pl-10 sm:gap-15">
+                <Items />
+                <Items />
+                <Items />
+              </div>
+
+              <div className="grid grid-cols-4 gap-4 p-2 px-2 sm:gap-15">
+                <Items />
+                <Items />
+                <Items />
+                <Items />
+              </div>
+            </div>
           </div>
         </div>
         {/* Yha s second part srart hoga okkh! niche wle elemnst okkh!*/}
@@ -178,3 +201,23 @@ export const CardMaterials = () => {
 };
 
 // mailPlus {..props} aisa pass kiya hoga uske baad hi hamm ye sab kar sakte hai okkh!.
+
+export const Items = ({
+  children,
+  className,
+  src,
+}: {
+  children?: React.ReactNode;
+  className?: string;
+  src?: string;
+}) => {
+  return (
+    <div
+      className={cn(
+        "size-20 rounded-xl border border-dashed border-neutral-400",
+        "bg-[linear-gradient(to_right,rgba(0,0,0,0.10)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.10)_1px,transparent_1px)] bg-[size:24px_24px] dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.06)_1px,transparent_1px)]",
+        className,
+      )}
+    ></div>
+  );
+};

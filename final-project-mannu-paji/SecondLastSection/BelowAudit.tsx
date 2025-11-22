@@ -21,6 +21,7 @@ const BelowAudit = () => {
           </CardDescription>
         </div>
       </div>
+      {/*Ye jo hai wo like 2nd wala part hai okkh!..*/}
       <div className="flex flex-col gap-2 p-4">
         <h1 className="text-xl font-bold text-neutral-800">Guardail Engine</h1>
         <CardDescription className="">
@@ -30,8 +31,8 @@ const BelowAudit = () => {
           </p>
         </CardDescription>
 
-        <div>
-          <div>
+        <div className="ml-14 space-y-4 border border-red-400">
+          <div className="">
             <Button className="bg-blue-100 text-blue-400">
               <SunMedium size={20} /> Brand & Style
             </Button>
@@ -40,7 +41,7 @@ const BelowAudit = () => {
               <UserRound /> Compliance & policy
             </Button>
           </div>
-          <div>
+          <div className="">
             <Button className="bg-purple-100 text-purple-400">
               {" "}
               <Rocket size={20} className="" /> Content Safety Fiilters
