@@ -12,7 +12,7 @@ import { Donut } from "lucide-react";
 import { Button } from "@/Components/ui/button";
 import { ClockFading } from "lucide-react";
 import { LoaderCircle } from "lucide-react";
-import { motion } from "motion/react";
+import { easeInOut, motion } from "motion/react";
 import { Search } from "lucide-react";
 import BelowAudit from "./BelowAudit";
 import Image from "next/image";
@@ -49,10 +49,26 @@ const AuditTrail = () => {
               </p>
             </CardDescription>
 
-            <div className="flex h-full w-full flex-col items-start justify-center gap-4 rounded-t-3xl px-8 pl-4">
+            <motion.div
+              className="flex h-full w-full flex-col items-start justify-center gap-4 rounded-t-3xl mask-b-from-60% mask-l-from-30% px-8 pl-4"
+              initial={{
+                y: 0,
+                opacity: 0,
+                filter: "blur(10px)",
+              }}
+              animate={{
+                y: 10,
+                opacity: 2,
+                filter: "blur(0px)",
+              }}
+              transition={{
+                duration: 0.5,
+                ease: easeInOut,
+              }}
+            >
               <div className="grid grid-cols-4 gap-4 p-2 px-1 sm:gap-15">
                 <Items />
-                <Items src="/google.wbep" className="" />
+                <Items />
                 <Items />
                 <Items />
               </div>
@@ -69,7 +85,7 @@ const AuditTrail = () => {
                 <Items />
                 <Items />
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
         {/* Yha s second part srart hoga okkh! niche wle elemnst okkh!*/}
@@ -205,19 +221,37 @@ export const CardMaterials = () => {
 export const Items = ({
   children,
   className,
-  src,
+  src = "/@techy-Prey.jpg",
 }: {
   children?: React.ReactNode;
   className?: string;
   src?: string;
 }) => {
   return (
-    <div
+    <motion.div
+      initial={{
+        zIndex: 1,
+      }}
+      whileHover={{
+        zIndex: 20,
+        scale: 1.02,
+        y: -4,
+      }}
       className={cn(
-        "size-20 rounded-xl border border-dashed border-neutral-400",
+        "relative z-10 size-20 rounded-xl border border-dashed border-neutral-400 p-0.5",
         "bg-[linear-gradient(to_right,rgba(0,0,0,0.10)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.10)_1px,transparent_1px)] bg-[size:24px_24px] dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.06)_1px,transparent_1px)]",
         className,
       )}
-    ></div>
+    >
+      <div className="relative z-1 flex h-full w-full items-center justify-center rounded-xl bg-black">
+        <Image
+          src={src}
+          alt="#Images"
+          height={80}
+          width={80}
+          className="aspect-square overflow-auto rounded-xl object-cover"
+        />
+      </div>
+    </motion.div>
   );
 };
