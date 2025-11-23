@@ -8,6 +8,7 @@ import FeaturesSection from "@/Components/features/index";
 import Section from "@/Middelsection/Section";
 import HeadingAgain from "@/Middelsection/HeadingAgain";
 import AuditTrail from "@/SecondLastSection/AuditTrail";
+import PricingSection from "@/ThirdLastSection/PricingSection";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Section />
       <HeadingAgain />
       <AuditTrail />
+      <PricingSection />
     </div>
   );
 }
