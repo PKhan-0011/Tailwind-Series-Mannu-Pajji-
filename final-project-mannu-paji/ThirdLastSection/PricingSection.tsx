@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Container from "@/Components/Container";
 import { Bug } from "lucide-react";
@@ -5,6 +6,7 @@ import { CopyPlus } from "lucide-react";
 import { UserRoundSearch } from "lucide-react";
 import { Button } from "@/Components//ui/button";
 import { CircleCheck } from "lucide-react";
+import { easeInOut, motion } from "motion/react";
 
 const PricingSection = () => {
   return (
@@ -26,28 +28,69 @@ const PricingSection = () => {
             </p>
 
             <div className="flex flex-col gap-4">
-              <div className="flex items-center gap-3 text-2xl font-semibold">
-                <span className="rounded-lg bg-blue-600 p-2 text-white">
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  filter: "blur(10px)",
+                }}
+                animate={{
+                  opacity: 1,
+                  filter: "blur(3px)",
+                }}
+                transition={{
+                  delay: 0.5,
+                  duration: 0.3,
+                  ease: easeInOut,
+                }}
+                whileHover={{
+                  filter: "blur(0px)",
+                  y: -5,
+                  scale: 1.1,
+                  transition: { duration: 0.6, ease: easeInOut },
+                }}
+                className="flex w-80 cursor-pointer items-center gap-3 rounded border border-black bg-gray-50 p-2 pl-2 text-lg font-semibold text-gray-500 md:text-xl lg:text-2xl dark:text-gray-200"
+              >
+                <span className="rounded-lg bg-blue-600 p-1 text-white dark:rounded-2xl dark:border-2 dark:bg-neutral-700">
                   {" "}
                   <Bug />
                 </span>{" "}
                 Build-in Guardrials
-              </div>
+              </motion.div>
 
-              <div className="flex items-center gap-3 text-2xl font-semibold">
-                <span className="rounded-lg bg-violet-500 p-2 text-white">
+              <div className="flex w-80 items-center gap-3 rounded border border-black bg-gray-50 p-2 pl-2 text-lg font-semibold text-gray-500 md:text-xl lg:text-2xl dark:text-gray-200">
+                <span className="rounded-lg bg-violet-500 p-1 text-white dark:rounded-2xl dark:border-2 dark:bg-neutral-700">
                   <CopyPlus />{" "}
                 </span>
                 Agent Orchestration
               </div>
 
-              <div className="flex items-center gap-3 text-2xl font-semibold">
-                <span className="rounded-lg bg-red-600 p-2 text-white">
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  filter: "blur(0px)",
+                }}
+                animate={{
+                  opacity: 1,
+                  filter: "blur(4px)",
+                }}
+                transition={{
+                  duration: 0.3,
+                  ease: easeInOut,
+                  delay: 1,
+                }}
+                whileHover={{
+                  filter: "blur(0px)",
+                  scale: 1.1,
+                  transition: { duration: 1, ease: easeInOut },
+                }}
+                className="flex w-80 items-center gap-3 rounded border border-black bg-gray-50 p-2 pl-2 text-lg font-semibold text-gray-500 md:text-xl lg:text-2xl dark:text-gray-200"
+              >
+                <span className="rounded-lg bg-red-600 p-1 text-white dark:rounded-2xl dark:border-2 dark:bg-neutral-700">
                   {" "}
                   <UserRoundSearch />{" "}
                 </span>{" "}
                 Human-in-the-loop
-              </div>
+              </motion.div>
             </div>
           </div>
 

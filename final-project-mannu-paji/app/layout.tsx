@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.className} ${manrope.variable} antialiased bg-background text-foreground`}
+        className={`${inter.className} ${manrope.variable} bg-background text-foreground antialiased`}
       >
         <ThemeProvider
           attribute="class"

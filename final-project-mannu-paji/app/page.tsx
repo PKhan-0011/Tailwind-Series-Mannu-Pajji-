@@ -9,6 +9,7 @@ import Section from "@/Middelsection/Section";
 import HeadingAgain from "@/Middelsection/HeadingAgain";
 import AuditTrail from "@/SecondLastSection/AuditTrail";
 import PricingSection from "@/ThirdLastSection/PricingSection";
+import Faq from "@/LastSection/Faq";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <HeadingAgain />
       <AuditTrail />
       <PricingSection />
+      <Faq />
     </div>
   );
 }
