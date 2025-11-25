@@ -4,6 +4,7 @@ import { BrainCircuit } from "lucide-react";
 import { Button } from "@/Components/ui/button";
 import Link from "next/link";
 import { SendHorizontal } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const Footer = () => {
   const Product = [
@@ -53,7 +54,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="border-t border-neutral-200 py-10 md:py-14 lg:py-20 dark:border-neutral-800">
+    <footer className="border-t border-neutral-200 pt-10 md:pt-14 lg:pt-16 dark:border-neutral-800">
       <Container className="mx-auto grid max-w-5xl grid-cols-1 gap-5 md:grid-cols-5">
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-2">
@@ -121,6 +122,20 @@ const Footer = () => {
           </p>
         </div>
       </Container>
+      <div
+        className={cn(
+          "mx-auto mt-4 flex h-20 w-full max-w-6xl items-center justify-between md:mt-6 lg:mt-8",
+          //"bg-[linear-gradient(to_right,rgba(0,0,0,0.10)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.10)_1px,transparent_1px)] bg-[size:24px_24px] dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.06)_1px,transparent_1px)]", isko dhyan rakhna hai sahi s okkh!..
+        )}
+      >
+        <p className="text-sm text-gray-600">
+          @ 2025 Agenforce-All Rights Reserved
+        </p>
+
+        <p className="flex gap-4 text-sm text-gray-600">
+          Privacy policy <span className="">Terms of service</span>
+        </p>
+      </div>
     </footer>
   );
 };
