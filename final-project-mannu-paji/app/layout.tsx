@@ -3,6 +3,7 @@ import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
 import ThemeProvider from "@/ThemeProvider/ThemeProvider";
 import Navbar from "@/Components/Navbar";
+import Footer from "@/Footer/Footer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -39,6 +40,7 @@ export default function RootLayout({
         >
           <Navbar />
           <main className=""> {children} </main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
