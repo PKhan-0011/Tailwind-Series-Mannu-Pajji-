@@ -54,7 +54,11 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="border-t border-neutral-200 pt-10 md:pt-14 lg:pt-16 dark:border-neutral-800">
+    <footer
+      className={cn(
+        "relative border-t border-neutral-200 pt-10 md:pt-14 lg:pt-16 dark:border-neutral-800",
+      )}
+    >
       <Container className="mx-auto grid max-w-5xl grid-cols-1 gap-5 md:grid-cols-5">
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-2">
@@ -124,7 +128,7 @@ const Footer = () => {
       </Container>
       <div
         className={cn(
-          "mx-auto mt-4 flex h-20 w-full max-w-6xl items-center justify-between md:mt-6 lg:mt-8",
+          "mx-auto mt-4 flex h-20 w-full max-w-6xl items-center justify-between px-2 md:mt-6 lg:mt-8",
           //"bg-[linear-gradient(to_right,rgba(0,0,0,0.10)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.10)_1px,transparent_1px)] bg-[size:24px_24px] dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.06)_1px,transparent_1px)]", isko dhyan rakhna hai sahi s okkh!..
         )}
       >
